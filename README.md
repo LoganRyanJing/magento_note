@@ -1,16 +1,20 @@
 # magento_note
 ### magento打印sql语句
-```
+```angular2html
   $query=$productCollection->getSelectSql(true);
+  echo $query;
+  exit();
 ```
-```
+```angular2html
    $category = Mage::getModel('catalog/category')->load($values['categories']);
         $productCollection = $category->getProductCollection()
        ->addStoreFilter(Mage::app()->getStore()->getId())           
        ->addAttributeToSort('position', 'ASC');
 ```
  使用命令行来刷新索引管理会极大降低系统消耗，容易成功。
-
+ 
+### magento清除索引
+ 
 我们来看下步骤，如果你在使用linux服务器，登入你的ssh客户端，切换目录到你magento根文件夹中名字是shell的文件中。（切换文件夹的命令：cd）
 ```
 php -f indexer.php -- -reindex catalog_url
