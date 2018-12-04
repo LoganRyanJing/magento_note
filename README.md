@@ -33,3 +33,20 @@ php -f indexer.php -- -reindex catalog_url
 
         php -f indexer.php -- -reindex tag_summary
 ```
+
+### cron 设置定时任务
+一般编辑cron任务
+```angular2html
+    crontab -e
+```
+cron启动，停止，重启
+```angular2html
+    service cron start //启动服务
+    
+    service cron stop //关闭服务
+    
+    service cron restart //重启服务
+    
+    service cron reload //重新载入配置
+```
+
