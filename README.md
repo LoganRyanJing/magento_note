@@ -34,6 +34,11 @@ php -f indexer.php -- -reindex catalog_url
         php -f indexer.php -- -reindex tag_summary
 ```
 
+**下面的代码将通过每个索引循环，来重新建立索引**
+```php
+php indexer.php --reindexall
+```
+
 ### cron 设置定时任务
 一般编辑cron任务
 ```angular2html
